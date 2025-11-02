@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: block;
+        }
+        .dashboard-container {
+            width: 90%;
+            margin: 2rem auto;
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px var(--shadow-color);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        nav h1 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        #logout-btn {
+            background: var(--primary-color);
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav>
+            <h1>Student Dashboard</h1>
+            <button id="logout-btn">Logout</button>
+        </nav>
+        <main>
+            <h2>Welcome, Student!</h2>
+            <p>This is where you will find your classes, subjects, and notes.</p>
+        </main>
+    </div>
+    <script>
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            window.location.href = '/';
+        });
+    </script>
+</body>
+</html>
